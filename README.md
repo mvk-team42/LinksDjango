@@ -5,7 +5,7 @@ Sweet links project. :)
 
 Installing Django+MongoDB
 -------------------------
-h3. Linux instructions  
+### Linux instructions  
 
 Install virtualenv:  
 `pip install virtualenv`  
