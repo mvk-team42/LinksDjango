@@ -1,0 +1,10 @@
+{% if primes %}
+	<h3>Primes:</h3>
+	<ul>
+	{% for prime in primes &}
+		<li> {{prime}} </li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p> No primes! </p>
+{% endif %}
