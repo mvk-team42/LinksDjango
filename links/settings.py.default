@@ -4,9 +4,10 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
-    ('Anton', 'aerholt@kth.se')
+    # ('Your Name', 'your_email@example.com'), 
 )
+
+#SITE_ID = u'50f2e4eb1123ee384a1346a8'
 
 MANAGERS = ADMINS
 
@@ -21,8 +22,8 @@ DATABASES = {
     }
 }
 
-SITE_ID = u'50f69e161123ee0cd1bc1302'
-#SITE_ID = u'50f2e4eb1123ee384a1346a8'
+
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -111,7 +112,6 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/meta/mvk/LinksDjango/links/linkz/templates',
 )
 
 INSTALLED_APPS = (

@@ -3,6 +3,18 @@ Example Django project!
 
 Sweet links project. :)
 
+
+Setup instructions for LinksDjango
+----------------------------------
+
+The settings.py.default should be renamed settings.py and contain a
+variable called SITE_ID, containing whatever mysterious id generated
+by
+	python manage.py tellsiteid
+
+Another good idea is to add yourself as an admin in the settings.py file.
+
+
 Installing Django+MongoDB
 -------------------------
 ### Linux instructions  
