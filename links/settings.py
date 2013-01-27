@@ -15,14 +15,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django_mongodb_engine',  # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'linksdjango',
-        'HOST': '127.0.0.1',
-#        'HOST': '130.237.223.34',                      # Set to empty string for localhost. Not used with sqlite3.
+        #'HOST': '127.0.0.1',
+        'HOST': '130.237.223.51',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': 27017,                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
-SITE_ID = u'50f69e161123ee0cd1bc1302'
-#SITE_ID = u'50f2e4eb1123ee384a1346a8'
+SITE_ID=u'510527411123ee0f966afb46'
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
