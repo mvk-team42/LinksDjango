@@ -32,7 +32,7 @@ Install django-nonrel from git repo:
 `nonrel-env/bin/pip install git+https://github.com/django-nonrel/django-nonrel.git`  
 
 Install djangotoolbox from git repo:  
-`nonrel-env/bin/pip install djangotoolbox
+`nonrel-env/bin/pip install djangotoolbox`
 
 Install MongoDB from git repo:  
 `nonrel-env/bin/pip install git+https://github.com/django-nonrel/mongodb-engine.git`  
