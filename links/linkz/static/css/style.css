@@ -1,0 +1,334 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,600);
+
+body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+	font-family: 'Raleway';
+	font-size: 14pt;
+}
+
+header {
+	position: relative;
+	height: 80px;
+	overflow: hidden;
+	background-color: #000;
+	color: #fff;
+}
+
+header h1 {
+	margin: 0px;
+	position: absolute;
+	left: 30px;
+	top: 0px;
+	font-size: 45pt;
+	font-weight: 600;
+	line-height: 80px;
+	color: #fff;
+}
+
+header img {
+	position: absolute;
+	left: 280px;
+	top: 13px;
+}
+
+header a,
+header a:hover,
+header a:active,
+header a:visited,
+header a:link {
+	text-decoration: none;
+	color: #fff;N
+}
+
+header #menu {
+	margin: 0px;
+	position: absolute;
+	right: 20px;
+	bottom: 0px;
+	height: 50px;
+}
+
+header #menu li {
+	height: 50px;
+	float: left;
+	list-style-type: none;
+	font-size: 20pt;
+	line-height: 50px;
+	background-color: #000;
+}
+
+header #menu li a {
+	display: block;
+	padding: 0px 12px;
+	height: 50px;
+}
+
+header #menu .active {
+	background-color: #eee;
+}
+
+header #menu .active a,
+header #menu .active a:hover,
+header #menu .active a:active,
+header #menu .active a:visited,
+header #menu .active a:link {
+	color: #000;
+}
+
+footer {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 35px;
+	overflow: hidden;
+	background-color: #000;
+	color: #fff;
+}
+
+footer p {
+	margin: 0px;
+	padding: 0px 0px 0px 15px;
+	font-size: 11pt;
+	line-height: 35px;
+}
+
+footer img {
+	margin: 0px 3px;
+	display: inline-block;
+	vertical-align: middle;
+	height: 20px;
+}
+
+#content {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 80px;
+	bottom: 35px;
+	overflow: hidden;
+}
+
+.view {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: #eee;
+}
+
+.view h1 {
+	margin: 0px;
+	font-size: 35pt;
+	font-weight: 600;
+	color: #666;
+}
+
+.view .content {
+	position: absolute;
+	left: 0px;
+	right: -17px;
+	top: 0px;
+	bottom: 0px;
+	padding: 20px 47px 20px 30px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#search {
+}
+
+#network {
+	left: 100%;
+}
+
+#info {
+	left: 100%;
+}
+
+#search .content {
+
+}
+
+#network .content {
+	padding-left: 70px;
+}
+
+#info .content {
+	padding-left: 110px;
+}
+
+#search .arrow {
+	right: -40px;
+	z-index: 2;
+}
+
+#network .arrow {
+	right: -80px;
+	z-index: 1;
+}
+
+#info .arrow {
+}
+
+.arrow {
+	width: 40px;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	cursor: pointer;
+	background-image: url(../images/right_arrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #eee;
+	-webkit-box-shadow: 5px 0px 11px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow: 5px 0px 11px rgba(50, 50, 50, 0.25);
+	box-shadow: 5px 0px 11px rgba(50, 50, 50, 0.25);
+}
+
+.arrow p {
+	margin: 20px 0 0 0;
+	line-height: 40px;
+	color: #999;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+#default-search {
+	margin: 20px 0px;
+	width: 600px;
+}
+
+#advanced-search {
+	display: none;
+	margin: 20px 0px;
+	width: 600px;
+}
+
+#search-result {
+	display: none;
+	border-top: 1px solid #bbb;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+#search-result ul {
+	width: 600px;
+	margin: 20px 0px;
+	padding: 0px;
+}
+
+#search-result ul li {
+	margin: -1px 0px 0px 0px;
+	list-style-type: none;
+	border: 1px solid #bbb;
+	background-color: #fff;
+}
+
+#search-result ul li a {
+	width: 600px;
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+
+#search-result ul li a div {
+	width: 578px;
+	padding: 5px 10px;
+}
+
+#search-result ul li a div p {
+	margin: 2px 0px;
+}
+
+#search-result ul li a div:hover {
+	outline: 2px solid #bbb;
+}
+
+#search-button {
+	width: 600px;
+}
+
+#network-holder {
+	position: absolute;
+	left: 70px;
+	right: 30px;
+	top: 80px;
+	bottom: 20px;
+	background-color: #fff;
+	-webkit-box-shadow: 5px 5px 11px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow: 5px 5px 11px rgba(50, 50, 50, 0.25);
+	box-shadow: 5px 5px 11px rgba(50, 50, 50, 0.25);
+}
+
+#network-graph {
+	width: 100%;
+	height: 100%;
+}
+
+form p {
+	margin: 0px;
+	line-height: 32px;
+}
+
+form p input {
+	margin: 0px;
+	float: right;
+}
+
+input {
+	font-family: 'Raleway';
+	font-size: 14pt;
+	line-height: 30px;
+	outline: none;
+}
+
+input[type=text] {
+	width: 400px;
+	padding: 0px 5px;
+	border: 1px solid #bbb;
+}
+
+input[type=button] {
+	padding: 0px 10px;
+	border: 1px solid #bbb;
+	background-color: #eee;
+}
+
+input[type=button]:hover {
+	background-color: #fff;
+}
+
+input[type=button]:active {
+	background-color: #bbb;
+	color: #fff;
+}
+
+input:focus {
+	outline: 1px solid #bbb;
+}
+
+.break {
+	height: 20px;
+	display: block;
+}
+
+/* d3 graph styling */
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}

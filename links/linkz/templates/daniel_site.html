@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>mvk - prototype v0.1</title>
+<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" type="text/css" />
+<script>window.team42={};window.team42.static_url="{{ STATIC_URL }}";</script>
+<script src="{{ STATIC_URL }}javascript/jquery-1.9.0.min.js" type="text/javascript"></script>
+<script src="{{ STATIC_URL }}javascript/d3.v3.min.js" type="text/javascript"></script>
+<script src="{{ STATIC_URL }}javascript/script.js" type="text/javascript"></script>
+</head>
+<body>
+	<header>
+		<h1>team 42</h1>
+		
+		<img src="{{ STATIC_URL }}images/pc.png" />
+		
+		<ul id="menu">
+			<li class="active"><a href="#">search</a></li>
+			<li><a href="#">network</a></li>
+			<li><a href="#">info</a></li>
+		</ul>
+	</header>
+
+	<div id="content">
+		<div id="search" class="view">
+			<div class="content">
+				<h1>search view</h1>
+				
+				<form id="default-search">
+					<p>free text<input type="text" /></p>
+					<span class="break"></span>
+					<input type="button" name="advanced" value="switch to advanced search" />
+				</form>
+				
+				<form id="advanced-search">
+					<p>source (name/URL)<input type="text" /></p>
+					<span class="break"></span>
+					<p>tags<input type="text" /></p>
+					<div id="tags"></div>
+				</form>
+				
+				<input type="button" id="search-button" value="SEARCH" />
+				
+				<div id="search-result">
+					<h1>search result</h1>
+                    <ul>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="arrow"><p>search</p></div>
+		</div>
+		
+		<div id="network" class="view">
+			<div class="content">
+				<h1>network view</h1>
+				
+				<div id="network-holder">
+					<svg id="network-graph"></svg>
+				</div>
+			</div>
+			
+			<div class="arrow"><p>network</p></div>
+		</div>
+		
+		<div id="info" class="view">
+			<div class="content">
+				<h1>info view</h1>
+				
+				<p>Don't panic... it's just a prototype.</p>
+			</div>
+		</div>
+	</div>
+	
+	<footer>
+		<p>2013 team 42 <img src="{{ STATIC_URL }}images/pc.png" /> prototype v0.1</p>
+	</footer>
+</body>
+</html>

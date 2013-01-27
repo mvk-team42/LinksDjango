@@ -9,6 +9,9 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'linkz.views.home', name='home'),
+    url(r'^fudge/(.*)$', 'linkz.views.super_slide'),
+    url(r'^daniel$', 'linkz.views.daniel'),
+    url(r'^search$', 'linkz.views.search'),
     # url(r'^links/', include('links.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
