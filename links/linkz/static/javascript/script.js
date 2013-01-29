@@ -1,5 +1,5 @@
 ﻿(function (undefined) {
-	var menu, arrows, search, network, info, svg;
+	var menu, arrows, search, network, account, info, svg;
 	var advanced;
 	var easing = 400;
 	var easing_fast = 80;
@@ -15,6 +15,7 @@
 		
 		search = $("#search");
 		network = $("#network");
+		account = $("#account");
 		info = $("#info");
 		
 		_menu = $("#menu li");
@@ -22,12 +23,14 @@
 		menu = {
 			"search" : $(_menu[0]),
 			"network" : $(_menu[1]),
-			"info" : $(_menu[2])
+    		"account" : $(_menu[2]),
+			"info" : $(_menu[3])
 		};
 		
 		arrows = {
 			"search" : $("#search .arrow:first"),
-			"network" : $("#network .arrow:first")
+			"network" : $("#network .arrow:first"),
+    		"account" : $("#account .arrow:first")
 		};
 		
 		advanced = false;
@@ -37,6 +40,9 @@
 		
 		menu.network.click(networkClick);
 		arrows.network.click(networkClick);
+		
+		menu.account.click(accountClick);
+		arrows.account.click(accountClick);
 		
 		menu.info.click(infoClick);
 		
@@ -107,12 +113,17 @@
 			"left" : "100%"
 		}, easing, null);
 		
+		account.animate({
+			"left" : "100%"
+		}, easing, null);
+		
 		info.animate({
 			"left" : "100%"
 		}, easing, null);
 		
 		menu.search.addClass("active");
 		menu.network.removeClass("active");
+		menu.account.removeClass("active");
 		menu.info.removeClass("active");
 	}
 	
@@ -125,12 +136,40 @@
 			"left" : "0px"
 		}, easing, null);
 		
+		account.animate({
+			"left" : "100%"
+		}, easing, null);
+		
 		info.animate({
 			"left" : "100%"
 		}, easing, null);
 		
 		menu.search.removeClass("active");
 		menu.network.addClass("active");
+		menu.account.removeClass("active");
+		menu.info.removeClass("active");
+	}
+	
+	window.accountClick = function (evt) {
+		search.animate({
+			"left" : "-100%"
+		}, easing, null);
+		
+		network.animate({
+			"left" : "-100%"
+		}, easing, null);
+		
+		account.animate({
+			"left" : "0px"
+		}, easing, null);
+		
+		info.animate({
+			"left" : "100%"
+		}, easing, null);
+		
+		menu.search.removeClass("active");
+		menu.network.removeClass("active");
+		menu.account.addClass("active");
 		menu.info.removeClass("active");
 	}
 	
@@ -143,12 +182,17 @@
 			"left" : "-100%"
 		}, easing, null);
 		
+		account.animate({
+			"left" : "-100%"
+		}, easing, null);
+		
 		info.animate({
 			"left" : "0px"
 		}, easing, null);
 		
 		menu.search.removeClass("active");
 		menu.network.removeClass("active");
+		menu.account.removeClass("active");
 		menu.info.addClass("active");
 	}
 	
@@ -250,8 +294,8 @@
                         _html += "<tr index='"+i+"'><td><p class='title'>" + data[i].fields.title + "</p><p class='source'>" + data[i].fields.source + "</p><p class='summary'>" + data[i].fields.summary + "</p></td><td class='rating'><div>" + data[i].fields.trustworthy + "</div></td></tr>";
                     } else {
                         _html += "<tr  index='"+i+"'><td>" + data[i].fields.name + "</td><td>" + data[i].fields.source_type + "</td><td>" + data[i].fields.tag + "</td>";
-                        if( data[i].fields.rating > 1) _html += "<td class='rating'><div>" + data[i].fields.rating + "</div></td></tr>";
-                        else _html += "<td class='rating'><div>N/A</div></td></tr>";
+                        if( data[i].fields.rating > 1) _html += "<td class='rating user-rating'><div>" + data[i].fields.rating + "</div></td></tr>";
+                        else _html += "<td class='rating'><div>1</div></td></tr>";
                     }
                 }
                 
@@ -276,12 +320,11 @@
         $("#network-info-view > .description").html(data.fields.description);
         $("#network-info-view > .type").html(data.fields.source_type);
         $("#network-info-view > .tags").html(data.fields.tag);
-        
-        if(data.fields.rating > 1) {
+    
             $("#network-info-view > > .rating").html(data.fields.rating);
-        } else {
-            $("#network-info-view > > .rating").html("N/A");
-        }
+  
+
+        
         
         networkClick();
     }

@@ -12,14 +12,16 @@
 </head>
 <body>
 	<header>
-		<h1>team 42</h1>
 		
-		<img src="{{ STATIC_URL }}images/pc.png" />
+		
+		<img src="{{ STATIC_URL }}images/kluster_logo.png" />
+		<h1>KLUSTER</h1>
 		
 		<ul id="menu">
-			<li class="active"><a href="#">search</a></li>
-			<li><a href="#">network</a></li>
-			<li><a href="#">info</a></li>
+			<li class="active"><a href="#">Search</a></li>
+			<li><a href="#">Network</a></li>
+			<li><a href="#">Account</a></li>
+			<li><a href="#">Info</a></li>
 		</ul>
 	</header>
 
@@ -29,16 +31,16 @@
 				<h1>Search view</h1>
 				
 				<div id="free-text-search">
-					<input type="button" name="header" value="free text search" class="header" />
+					<input type="button" name="header" value="Free text search" class="header" />
 
 					<div class="search-area">				
 					    <input type="text" name="text" />
-					    <input type="button" name="search" value="search" />
+					    <input type="button" name="search" value="Search" />
 					</div>
 				</div>
 				
 				<div id="source-tag-search">
-					<input type="button" name="header" value="source/tag search" class="header" />
+					<input type="button" name="header" value="Source/tag search" class="header" />
 					
 					<div class="search-area">
 					    <label>Source:<input type="text" name="text" /></label>
@@ -49,7 +51,7 @@
     					
                         <p>Time period:<br /><p id="period">1968 - 2011</p><img src="{{ STATIC_URL }}images/slider.png" /></p>
     					
-					    <input type="button" name="search" value="search" />
+					    <input type="button" name="search" value="Search" />
 					</div>
 				</div>
 				
@@ -60,7 +62,7 @@
 				</div>
 			</div>
 			
-			<div class="arrow"><p>search</p></div>
+			<div class="arrow"><p>Search</p></div>
 		</div>
 		
 		<div id="network" class="view">
@@ -71,7 +73,7 @@
 				    <p class="type">Type</p>
 				    <p class="tags">Tags</p>
 				    <p>Calculated trust: <span class="rating">Rating</span> <input type="button" value="calculate trust" /></p>
-				    <p>Your trust level <select><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></p>
+				    <p>Set new trust level <select><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></p>
 				</div>
 				
 				<div id="network-holder">
@@ -79,7 +81,38 @@
 				</div>
 			</div>
 			
-			<div class="arrow"><p>network</p></div>
+			<div class="arrow"><p>Network</p></div>
+		</div>
+		
+		<div id="account" class="view">
+			<div class="content">
+			    <h1>Account</h1>
+			    <p>Name: Mr. Advanced</p>
+			    <h2>Your rated sources:</h2>
+			    <ul class="list">
+			        <li>DN<span class="rating">4</span></li>
+			        <li>Global Terrorism Database (GTD)<span class="rating">5</span></li>
+			        <li>Al-watwan<span class="rating">3</span></li>
+                    <li>Rodong Sinmun<span class="rating">4</span></li>
+                    <li>Minju Choson<span class="rating">2</span></li>
+                    <li>Pyongyang Sinmun<span class="rating">3</span></li>
+                    <li>The Pyongyang Times<span class="rating">3</span></li>
+                    <li>Rimjingang (unofficial, private publication)<span class="rating">2</span></li>
+                    <li>Korean News Service (Chosun Tongsin)<span class="rating">4</span></li>
+			    </ul>
+			    
+				<h2>Friends</h2>
+				<p>Friends list:</p>
+				<ul class="list">
+				    <li>Daniel Molin</li>
+				    <li>John Brynte Turesson</li>
+				    <li>Slim Jim</li>
+				</ul>
+				<p>Search friends:</p>
+				<p><input type="text" /><input type="button" value="Add" /></p>
+			</div>
+			
+			<div class="arrow"><p>Account</p></div>
 		</div>
 		
 		<div id="info" class="view">
