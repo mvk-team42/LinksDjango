@@ -1,4 +1,4 @@
-from models import Link, Daniel
+from models import Link, Daniel, Publication, Source
 from django.contrib import admin
 
 class LinkAdmin(admin.ModelAdmin):
@@ -8,3 +8,5 @@ class LinkAdmin(admin.ModelAdmin):
 
 admin.site.register(Link, LinkAdmin)
 admin.site.register(Daniel)
+admin.site.register(Publication)
+admin.site.register(Source)

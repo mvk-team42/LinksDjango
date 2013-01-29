@@ -28,12 +28,24 @@ def daniel(request):
     return render_to_response('daniel_site.html', c)
         
 def search(request):
-    links = "{}"
+    response = '[]'
 
-    if request.GET['free_text']:
-        links = serializers.serialize('json', Link.objects.filter(description__contains=request.GET['free_text']))     
+    if 'free_text' in request.GET:
+        response = serializers.serialize('json', Publication.objects.filter(title__contains=request.GET['free_text']))
+        
+    elif 'source' in request.GET:
+        if 'tag' in request.GET:
+            tags = request.GET['tag'].split('+')
+        
+            for t in tags:
+                if response == '[]':
+                    response = serializers.serialize('json', Source.objects.filter(name__contains=request.GET['source']).filter(tag=t))
+        else:
+            response = serializers.serialize('json', Source.objects.filter(name__contains=request.GET['source']))
     
-    return HttpResponse(links, mimetype="application/json")
+    print response
+    
+    return HttpResponse(response, mimetype="application/json")
 
 # def linkhandler(request):
 #     context = Context()
